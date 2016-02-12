@@ -520,6 +520,8 @@ def list_dir_all(cookie, tokens, path):
         content = list_dir(cookie, tokens, path, page)
         if not content:
             return (path, None)
+        if int(content['errno']) != 0:
+            return (path, None)
         if not content['list']:
             return (path, pcs_files)
         pcs_files.extend(content['list'])
