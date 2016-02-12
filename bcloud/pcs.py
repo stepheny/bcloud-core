@@ -235,7 +235,7 @@ def disable_share(cookie, tokens, shareid_list):
     else:
         return None
 
-def enable_private_share(cookie, tokens, fid_list):
+def enable_private_share(cookie, tokens, fid_list, passwd='dmlg'):
     '''建立新的私密分享.
 
     密码是在本地生成的, 然后上传到服务器.
@@ -249,7 +249,6 @@ def enable_private_share(cookie, tokens, fid_list):
         '&appid=250528',
     ])
     print('url:', url)
-    passwd = 'dmlg'
     data = encoder.encode_uri(''.join([
         'fid_list=', str(fid_list),
         '&schannel=4&channel_list=[]',
