@@ -251,7 +251,7 @@ def enable_private_share(cookie, tokens, fid_list):
     print('url:', url)
     passwd = 'dmlg'
     data = encoder.encode_uri(''.join([
-        'fid_list=[', str(fid_list), ']',
+        'fid_list=', str(fid_list),
         '&schannel=4&channel_list=[]',
         '&pwd=', passwd,
         ]))
