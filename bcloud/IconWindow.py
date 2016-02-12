@@ -572,7 +572,7 @@ class IconWindow(Gtk.ScrolledWindow):
         def on_share(info, error=None):
             print('on share:', info, error)
             if error or not info or info[0]['errno'] != 0:
-                logger.error('IconWindow.on_share_activated: %s, %s' %
+                logger.error('IconWindow.on_private_share_activated: %s, %s' %
                              (info, error))
                 self.app.toast(_('Failed to share selected files'))
                 return
